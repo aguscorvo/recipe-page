@@ -60,14 +60,8 @@ main {
   border-radius: 20px;
 }
 
-@media (width <= 425px) {
-  body {
-    padding: 0;
-  }
-}
-
-article {
-  padding-bottom: 30px;
+.recipe-info {
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -79,16 +73,34 @@ article {
   padding: 30px 0;
 }
 
-article img {
+main img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  margin-bottom: 10px;
 }
 
-article h1 {
+.recipe-info h1 {
   font-size: 38px;
   font-weight: normal;
+  color: var(--stone-900);
+}
+
+@media (width <= 425px) {
+  body {
+    padding: 0;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .recipe-wrapper {
+    padding: 0 30px 40px 30px;
+  }
+
+  .recipe-info h1 {
+    font-size: 35px;
+  }
 }
 
 h2 {
@@ -123,12 +135,11 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* list-style-position: inside; */
   margin-left: 25px;
 }
 
 li {
-  padding-left: 15px;
+  padding-left: 16px;
 }
 
 .table {
